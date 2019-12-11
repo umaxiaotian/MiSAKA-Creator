@@ -141,6 +141,15 @@ case $ANS in
     #所有ユーザーを変更
     chown www-data:www-data -R /app
 
+    #GITインストールファイルまで行ってみる
+    cd /app
+
+    #composer installを実行(vendorがないため)
+    composer install
+
+    #初期設定を済ませます
+    cp .env.example .env && php artisan key:generate && php artisan config:clear
+
     #apacheの設定を変更
     #VIRTUALHOSTファイルのバックアプ処理
     mv /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.misaka.backup
@@ -190,15 +199,6 @@ case $ANS in
 EOF
     #apache再起動
     systemctl restart apache2
-
-    #GITインストールファイルまで行ってみる
-    cd /app
-    
-    #composer installを実行(vendorがないため)
-    composer install
-
-    #初期設定を済ませます
-    cp .env.example .env && php artisan key:generate && php artisan config:clear
 
     #終了
     echo "インストールは終了しました。Laravelをお楽しみください。"
