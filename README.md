@@ -1,5 +1,5 @@
 # MiSAKA-Creator
-MiSAKA Creatorは簡単にワンクリック（1コマンド）で環境を構築するためのシェルスクリプトです。
+MiSAKA Creatorは簡単にワンクリック（1コマンド）でLaravel環境を構築するためのシェルスクリプトです。
 
 Ubuntuで使用する場合
 
