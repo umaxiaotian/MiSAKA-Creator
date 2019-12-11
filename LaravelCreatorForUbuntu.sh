@@ -196,6 +196,9 @@ EOF
     #composer installを実行(vendorがないため)
     cd /app && composer install
 
+    #初期設定を済ませます
+    cp .env.example .env && php artisan key:generate && php artisan config:clear
+
     #終了
     echo "インストールは終了しました。Laravelをお楽しみください。"
     ;;
