@@ -4,5 +4,5 @@ MiSAKA Creatorは簡単にワンクリック（1コマンド）で環境を構�
 Ubuntuで使用する場合
 
 ```
-$ curl -sf https://raw.githubusercontent.com/umaxiaotian/MiSAKA-Creator/master/LaravelCreatorForUbuntu.sh | sh -s
+$ sudo curl -sf https://raw.githubusercontent.com/umaxiaotian/MiSAKA-Creator/master/LaravelCreatorForUbuntu.sh | sh -s
 ```
