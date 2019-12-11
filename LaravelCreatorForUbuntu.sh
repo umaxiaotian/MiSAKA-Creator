@@ -194,7 +194,7 @@ EOF
 
     #GITインストールファイルまで行ってみる
     #composer installを実行(vendorがないため)
-    cd /app && composer install
+    cd app && composer install
 
     #初期設定を済ませます
     cp .env.example .env && php artisan key:generate && php artisan config:clear
