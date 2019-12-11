@@ -194,6 +194,9 @@ EOF
 
     #GITインストールファイルまで行ってみる
     cd /app
+    
+    #composer installを実行(vendorがないため)
+    composer install
 
     #終了
     echo "インストールは終了しました。Laravelをお楽しみください。"
