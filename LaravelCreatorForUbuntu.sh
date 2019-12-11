@@ -27,7 +27,6 @@
 # of the authors and should not be interpreted as representing official policies,
 # either expressed or implied, of the FreeBSD Project.
 
-
 #文字色定義
 colorred="\033[31m"
 colorpowder_blue="\033[1;36m" #with bold
@@ -190,11 +189,13 @@ case $ANS in
 </VirtualHost>
 EOF
     #apache再起動
-    service apache2 restart
+    systemctl restart apache2
 
     #GITインストールファイルまで行ってみる
+    cd /app
+    
     #composer installを実行(vendorがないため)
-    cd app && composer install
+    composer install
 
     #初期設定を済ませます
     cp .env.example .env && php artisan key:generate && php artisan config:clear
