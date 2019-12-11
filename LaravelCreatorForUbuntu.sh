@@ -193,7 +193,7 @@ EOF
     service apache2 restart
 
     #GITインストールファイルまで行ってみる
-    cd app
+    cd /app
 
     #終了
     echo "インストールは終了しました。Laravelをお楽しみください。"
